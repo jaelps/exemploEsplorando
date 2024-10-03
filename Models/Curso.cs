@@ -20,9 +20,17 @@ namespace exemploEsplorando.Models
             return quantidade;
         }
 
-        public void RemoverAluno(Pessoa aluno)
+        public bool RemoverAluno(Pessoa aluno)
         {
-            Alunos.Remove(aluno);
+            return Alunos.Remove(aluno);
+        }
+
+        public void ListarAlunos()
+        {
+            foreach(Pessoa aluno in Alunos)
+            {
+                Console.WriteLine(aluno.Nome);
+            }
         }
     }
 }
