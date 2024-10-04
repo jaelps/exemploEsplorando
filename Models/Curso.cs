@@ -27,9 +27,10 @@ namespace exemploEsplorando.Models
 
         public void ListarAlunos()
         {
+            Console.WriteLine("Alunos do curso de Inglês");
             foreach(Pessoa aluno in Alunos)
             {
-                Console.WriteLine(aluno.Nome);
+                Console.WriteLine(aluno.NomeCompleto);
             }
         }
     }

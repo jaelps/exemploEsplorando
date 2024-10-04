@@ -7,6 +7,16 @@ namespace exemploEsplorando.Models
 {
     public class Pessoa
     {
+        public Pessoa()
+        {
+
+        }
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            SobreNome = sobrenome;
+        }
+
         private string _nome;
         private int _idade;
 
@@ -24,6 +34,9 @@ namespace exemploEsplorando.Models
                 _nome = value;
             }
         }
+
+        public string SobreNome { get; set; }
+        public string NomeCompleto => $"{Nome} {SobreNome}".ToUpper();
         public int Idade { 
             get => _idade;
             set {
@@ -37,7 +50,7 @@ namespace exemploEsplorando.Models
 
         public void Apresentar()
         {
-            Console.WriteLine($"Nome: {Nome}, idade: {Idade}");
+            Console.WriteLine($"Nome: {NomeCompleto}, idade: {Idade}");
         }
     }
 }
